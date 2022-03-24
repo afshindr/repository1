@@ -12,10 +12,28 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-security:2.0.5.RELEASE'
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.0.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+            {exclude group: 'org.hibernate', module: 'hibernate-entityManager'}
+    //implementation 'org.eclipse.persistence:eclipselink'
+    implementation 'mysql:mysql-connector-java'
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+//    implementation ("org.springframework.boot:spring-boot-starter-security:2.0.5.RELEASE")
+//    implementation 'org.springframework.boot:spring-boot-starter-web:2.0.5.RELEASE'
+//    implementation ("org.springframework.boot:spring-boot-starter-data-jpa:2.0.0.RELEASE")
+//    implementation 'mysql:mysql-connector-java:5.1.47'
+//    implementation 'org.springframework.boot:spring-boot-starter'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //{exclude group: 'org.hibernate', module: 'hibernate-entityManager'}
+    //implementation 'org.springframework.boot:spring-boot-starter-data-rest:2.0.0.RELEASE'
+//    implementation 'org.eclipse.persistence:eclipselink:2.7.1'
+//    implementation 'org.springframework:spring-framework-bom:5.0.4.RELEASE'
+    //implementation 'mysql:mysql-connector-java:8.0.13'
+    //implementation 'org.hibernate:hibernate-entitymanager:5.3.1.Final'
 }
 
 test {
